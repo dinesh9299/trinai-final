@@ -6,6 +6,9 @@ import Solutions from "./pages/Solutions";
 import About from "./pages/About";
 import Main from "./pages/Main";
 import Categories from "./pages/Categories";
+import Cameraproductsdetails from "./pages/Cameraproductdetails";
+import Viewproducts from "./pages/Viewproducts";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           <Route path="solutions" element={<Solutions />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="categories" element={<Categories />}></Route>
+          <Route path="viewproducts" element={<Viewproducts />} />
+          <Route path="cemaradetails" element={<Cameraproductsdetails />} />
+          <Route path="products" element={<Products />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
