@@ -3,6 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../images/trinai-02.png";
 import logo1 from "../images/trinai white 1 (1).png";
 import gpu from "../images/gpu.png";
+import bullet from "../images/AI02B030L67-28(40)F-NS.png";
+import dome from "../images/AI02D040L67-05MV.png";
+import eyeball from "../images/AI08ID030L67-28(40)F-LS.png";
+import ptz from "../images/AI02P150L66-33MV-148F-LS.png";
+import server from "../images/Trinai Server.png";
 
 const categories = [
   //   "HD CCTV Camera",
@@ -12,7 +17,7 @@ const categories = [
   "Dome Cameras",
   "PTZ Cameras",
   "Network Video Recorder",
-  "Network Switches",
+  // "Network Switches",
   "Server",
   "Smart GPU with AI Camera",
   //   "WiFi Smart",
@@ -158,13 +163,11 @@ const productsByCategory = {
 };
 
 const categoryImages = {
-  "Bullet Cameras":
-    "https://img.freepik.com/free-vector/small-surveillance-camera-realistic-icon-white-background-vector-illustration_1284-66711.jpg?uid=P7856354&ga=GA1.1.1780034646.1729582102&semt=ais_hybrid",
-  "EyeBall Cameras":
-    "https://img.freepik.com/free-psd/modern-white-security-cctv-camera-isolated-transparent-background_84443-26526.jpg?uid=P7856354&ga=GA1.1.1780034646.1729582102&semt=ais_hybrid",
-  "Dome Cameras":
-    "https://img.freepik.com/free-psd/modern-white-security-cctv-camera-isolated-transparent-background_84443-26526.jpg?uid=P7856354&ga=GA1.1.1780034646.1729582102&semt=ais_hybrid",
-  "Network PTZ Cameras": "http://trinai.in/Images/PTZ_1.png",
+  "Bullet Cameras": bullet,
+  "Eyeball Cameras": eyeball,
+  "Dome Cameras": dome,
+  "PTZ Cameras": ptz,
+  Server: server,
   "Network Video Recorder": "http://trinai.in/Images/NVR.png",
   "Network Switches":
     "http://trinai.in/Images/Poe%20Switches/4%20port%20poe.png",
@@ -209,7 +212,10 @@ const Header = () => {
   return (
     <header
       className={`${
-        isScrolled || isCategoriesOpen
+        isScrolled ||
+        isCategoriesOpen ||
+        location.pathname === "/cemaradetails" ||
+        location.pathname === "/viewproducts"
           ? "bg-white shadow-lg text-black fixed top-0 left-0 right-0 "
           : "bg-transparent text-white fixed top-0 left-0 right-0 "
       } w-full px-4 transition-all duration-300 z-50 flex items-center justify-around pt-5`}
@@ -283,7 +289,7 @@ const Header = () => {
                     <img
                       src={categoryImages[selectedCategory]}
                       alt={selectedCategory}
-                      className=" w-auto h-24"
+                      className=" w-32 h-auto"
                     />
                   </div>
                 </div>
@@ -300,7 +306,14 @@ const Header = () => {
       >
         <Link to="/">
           <img
-            src={isScrolled || isCategoriesOpen ? logo : logo1}
+            src={
+              location.pathname === "/viewproducts" ||
+              isScrolled ||
+              location.pathname === "/cemaradetails" ||
+              isCategoriesOpen
+                ? logo
+                : logo1
+            }
             alt="Company Logo"
             className="h-16 w-auto"
           />
@@ -308,7 +321,7 @@ const Header = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex space-x-12">
+      <nav className="hidden md:flex space-x-5 lg:space-x-12">
         <Link
           to="/"
           className={`hover:text-orange-600  text-xl font-bold ${
@@ -323,7 +336,7 @@ const Header = () => {
             location.pathname === "/about" ? "text-orange-600" : ""
           }`}
         >
-          About Us
+          About
         </Link>
 
         {/* Categories Hover Trigger */}
@@ -363,10 +376,12 @@ const Header = () => {
       {/* Hamburger button */}
       <button
         onClick={() => setIsMenuOpen(true)}
-        className="md:hidden text-black"
+        className={`md:hidden ${
+          isScrolled ? "text-black" : "text-white"
+        } flex justify-center items-center -mt-5`}
       >
         <svg
-          className="w-6 h-6"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -412,7 +427,7 @@ const Header = () => {
             About Us
           </Link>
           <Link
-            to="/categories"
+            to="/products"
             onClick={() => setIsMenuOpen(false)}
             className="hover:text-blue-600"
           >

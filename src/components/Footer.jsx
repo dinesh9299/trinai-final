@@ -5,6 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 
 import { FaGoogle } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaPinterestSquare } from "react-icons/fa";
 
 import { IoMdMail } from "react-icons/io";
 const Footer = () => {
@@ -60,16 +61,25 @@ const Footer = () => {
             <p className="text-gray-400">Phone: +1 234 567 890</p>
             <div className=" flex my-7 gap-4">
               <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
-                <FaFacebookSquare className=" " size={20} />
+                <a href="https://www.facebook.com/profile.php?id=61574150717517">
+                  <FaFacebookSquare className=" " size={20} />
+                </a>
               </div>
               <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
-                <FaTwitter className=" " size={20} />
+                <a href="https://x.com/TRINAI557289">
+                  <FaTwitter className=" " size={20} />
+                </a>
               </div>
               <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
-                <IoMdMail className=" " size={20} />
+                <a href="https://in.pinterest.com/trinai_official/">
+                  <FaPinterestSquare className=" " size={20} />
+                </a>
               </div>
               <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
-                <FaInstagram className=" " size={20} />
+                <a href="https://www.instagram.com/trinai_official/">
+                  {" "}
+                  <FaInstagram className=" " size={20} />
+                </a>
               </div>
             </div>
           </div>

@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import sollutionbanner from "../images/cctv-security-online-camera-indoor (2).jpg";
 import solutionsByIndustry from "../components/sollutionbyindustry";
 import { Image } from "antd";
 import Senario from "../components/Secondsollution";
 import Solutionfunction from "../components/Thirdsollution";
+import { ScrollTop } from "primereact/scrolltop";
 
 function Solutions() {
   const [selectedIndustry, setSelectedIndustry] = useState(
     solutionsByIndustry[0]
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="sollution_maincontainer">
+    <div className="sollution_maincontainer text-gray-500">
       <div className="relative w-full">
         <img
           className="w-full h-[250px] md:h-[500px] lg:h-[700px] object-cover"
@@ -94,6 +99,14 @@ function Solutions() {
       </div>
       <div className="sollution_function">
         <Solutionfunction />
+      </div>
+      <div className="bg-red-500">
+        <ScrollTop
+          target="window"
+          threshold={100}
+          className="w-3rem h-3rem border-round bg-orange-600"
+          icon="pi pi-arrow-up text-white text-xl" // Apply orange color here
+        />
       </div>
     </div>
   );

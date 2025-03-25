@@ -10,10 +10,13 @@ import { BsAward } from "react-icons/bs";
 import CountUp from "react-countup";
 import carousel1 from "../images/triani-image-1.jpg";
 import carousel2 from "../images/new-2-01.jpg";
+import carousel3 from "../images/new3.jpg";
 
 import { AntDesignOutlined } from "@ant-design/icons";
 import { Button, ConfigProvider, Space } from "antd";
 import { createStyles } from "antd-style";
+import MyCarousel from "./Other";
+import { Link } from "react-router-dom";
 const useStyle = createStyles(({ prefixCls, css }) => ({
   linearGradientButton: css`
     &.${prefixCls}-btn-primary:not([disabled]):not(
@@ -54,6 +57,10 @@ const Home = () => {
     background: "#364d79",
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const logos = [
     "https://brihaspathi.com/assets-bt/img/logo/1.png",
     "https://brihaspathi.com/assets-bt/img/logo/2.png",
@@ -69,7 +76,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); // After 3 seconds, loading becomes false
-    }, 2000);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -81,7 +88,7 @@ const Home = () => {
       //       </div>
       //     </div>
 
-      <div className="flex flex-col justify-center items-center h-screen bg-gray-400">
+      <div className="flex flex-col justify-center items-center h-screen bg-black">
         {/* CCTV Camera GIF */}
         <div className=" flex">
           {" "}
@@ -114,7 +121,7 @@ const Home = () => {
       //   style={{ background: "linear-gradient(to bottom, #4568DC, #B06AB3)" }}
     >
       {/*Carousel */}
-      <div className="">
+      <div className=" w-full">
         <Carousel
           autoplay
           autoplaySpeed={3000}
@@ -122,26 +129,73 @@ const Home = () => {
           arrows
           infinite
         >
-          <div className="">
+          <div className="relative">
             <img
               src={carousel1}
               alt="Slide 1"
-              className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover "
+              className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover"
             />
+            <motion.div
+              initial={{ x: -200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="absolute  inset-0 flex flex-col justify-center items-start text-center text-white bg-opacity-30 p-20"
+            >
+              <h2 className="text-3xl md:text-5xl font-bold">
+                Welcome to Trinai
+              </h2>
+              <p className="text-lg md:text-2xl mt-4">
+                The Future of Smart Surveillance in INDIA
+              </p>
+            </motion.div>
           </div>
-          <div>
+
+          <div className="relative">
             <img
-              src="http://trinai.in/Images/cctv%203.jpg"
+              src={carousel3}
               alt="Slide 2"
-              className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover "
+              className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover"
             />
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-30 p-4">
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <h2 className="text-3xl md:text-5xl font-bold">
+                  Complete CCTV Solutions
+                </h2>
+              </motion.div>
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="text-lg md:text-2xl mt-4"
+              >
+                Monitor and protect what matters most.
+              </motion.div>
+            </div>
           </div>
-          <div>
+
+          <div className="relative">
             <img
               src={carousel2}
               alt="Slide 3"
               className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover"
             />
+            <motion.div
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="absolute inset-0 flex flex-col justify-center pe-20 items-end text-center text-white  p-4"
+            >
+              <h2 className="text-3xl md:text-5xl font-bold">
+                Smart Surveillance
+              </h2>
+              <p className="text-lg md:text-2xl mt-4">
+                AI-powered cameras with real-time analytics.
+              </p>
+            </motion.div>
           </div>
         </Carousel>
       </div>
@@ -338,13 +392,15 @@ const Home = () => {
                 }}
               >
                 <Space>
-                  <Button
-                    type="primary"
-                    size="large"
-                    icon={<AntDesignOutlined />}
-                  >
-                    View more
-                  </Button>
+                  <Link to="/products">
+                    <Button
+                      type="primary"
+                      size="large"
+                      icon={<AntDesignOutlined />}
+                    >
+                      View more
+                    </Button>
+                  </Link>
                   {/* <Button size="large">Button</Button> */}
                 </Space>
               </ConfigProvider>
@@ -385,14 +441,15 @@ const Home = () => {
                   }}
                 >
                   <Space>
-                    <Button
-                      type="primary"
-                      size="large"
-                      icon={<AntDesignOutlined />}
-                      className="bg-green-500 text-white hover:bg-green-700 border-none"
-                    >
-                      View more
-                    </Button>
+                    <Link to="/products">
+                      <Button
+                        type="primary"
+                        size="large"
+                        icon={<AntDesignOutlined />}
+                      >
+                        View more
+                      </Button>
+                    </Link>
                     {/* <Button size="large">Button</Button> */}
                   </Space>
                 </ConfigProvider>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import TextField from "@mui/material/TextField";
@@ -12,8 +12,13 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 import { FaLocationDot } from "react-icons/fa6";
 import MAp from "../components/Map";
+import { ScrollTop } from "primereact/scrolltop";
 const Contact = () => {
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -187,6 +192,14 @@ const Contact = () => {
           referrerpolicy="no-referrer-when-downgrade"
           className=" rounded-lg"
         ></iframe>
+      </div>
+      <div className="bg-red-500">
+        <ScrollTop
+          target="window"
+          threshold={100}
+          className="w-3rem h-3rem border-round bg-orange-600"
+          icon="pi pi-arrow-up text-white text-xl" // Apply orange color here
+        />
       </div>
     </div>
   );

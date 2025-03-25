@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bgpng from "../images/acam.png";
 import bullet from "../images/security-camera.png";
 import dom from "../images/cctv (2).png";
@@ -9,18 +9,25 @@ import poe from "../images/hub.png";
 import server from "../images/servers.png";
 import adnvr from "../images/dvr (1).png";
 import { useNavigate } from "react-router-dom";
+import { ScrollTop } from "primereact/scrolltop";
+import Extra from "../components/Extra";
 
 const Products = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   return (
     <div className=" bg-slate-100 ">
-      <div className=" bg-blue-900 pb-20">
-        <div>
-          <img src={bgpng} height={600} width={600}></img>
+      <Extra>
+        <div className="pb-20">
+          <div>
+            <img src={bgpng} height={600} width={600}></img>
+          </div>
         </div>
-      </div>
-      <div className="lg:p-20 md:p-10 p-5 -mt-44">
-        <div className=" border md:grid lg:grid grid-cols-4 gap-10 p-5 bg-white lg:p-20 rounded-lg">
+      </Extra>
+      <div className="relative  z-2 -mt-44 lg:p-20 md:p-10 p-5">
+        <div className=" border grid lg:grid-cols-4 grid-cols-2 md:grid-cols-4 gap-10 p-5 bg-white lg:p-20 rounded-lg">
           <div
             className=" shadow-md hover:scale-105 p-5  cursor-pointer"
             onClick={() => {
@@ -98,14 +105,14 @@ const Products = () => {
               Network Video Recorder
             </div>
           </div>
-          <div className=" shadow-md hover:scale-105 p-5 cursor-pointer ">
+          {/* <div className=" shadow-md hover:scale-105 p-5 cursor-pointer ">
             <div className=" flex justify-center items-center">
               <img className=" text-center" src={poe}></img>
             </div>
             <div className=" text-gray-500 flex justify-center items-center">
               POE Switches
             </div>
-          </div>
+          </div> */}
           <div
             className=" shadow-md hover:scale-105 p-5  cursor-pointer"
             onClick={() => {
@@ -128,6 +135,14 @@ const Products = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="bg-red-500">
+        <ScrollTop
+          target="window"
+          threshold={100}
+          className="w-3rem h-3rem border-round bg-orange-600"
+          icon="pi pi-arrow-up text-white text-xl" // Apply orange color here
+        />
       </div>
     </div>
   );

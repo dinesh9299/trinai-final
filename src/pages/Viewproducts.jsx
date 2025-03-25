@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainproducts from "../components/Mainproducts";
 import { useNavigate } from "react-router-dom";
 
 function Viewproducts() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="px-4 sm:px-6 lg:px-12 ">
+    <div className="px-4 sm:px-6 lg:px-12  bg-white">
       <div className="main_container mt-11">
-        <div className="p-6 bg-white shadow-[rgba(0,0,0,0.17)_0px_-23px_25px_0px_inset,rgba(0,0,0,0.15)_0px_-36px_30px_0px_inset,rgba(0,0,0,0.1)_0px_-79px_40px_0px_inset,rgba(0,0,0,0.06)_0px_2px_1px,rgba(0,0,0,0.09)_0px_4px_2px,rgba(0,0,0,0.09)_0px_8px_4px,rgba(0,0,0,0.09)_0px_16px_8px,rgba(0,0,0,0.09)_0px_32px_16px] rounded-lg">
+        <div
+          className="p-6 bg-white 
+        "
+        >
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
             Available Products
           </h2>

@@ -9628,6 +9628,7 @@ export const productsall = [
     cameraType: "Network",
     brand: "TRINAI",
     name: "16/32/64-channel input NVR",
+    document: "/Datadocumnets/nvr/AI16-32(04)-RG.pdf",
     tagline: "Vision With Intelligence",
     picture: "Newimages/AI16-32(04)-RG.png",
     product: "Network Video Recorder",
@@ -9845,6 +9846,7 @@ export const productsall = [
     cameraType: "Network",
     picture: "Newimages/AI16-32(04)-RG.png",
     name: "16/32-Channel Input NVR",
+    document: "/Datadocumnets/nvr/AI16-32(04)-RG.pdf",
     tagline: "Vision With Intelligence",
     product: "Network Video Recorder",
     model: "AI16-32(04)-RG",
@@ -10030,6 +10032,7 @@ export const productsall = [
     product: "Server",
     name: "Server",
     certificate: "ROHS",
+    document: "/Datadocumnets/server/server.pdf",
     picture: "Newimages/Trinai Server.png",
     keyFeatures: [
       "Stability: Linux OS, dual-BIOS, redundant power, two-server hot standby",

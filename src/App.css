@@ -108,3 +108,17 @@
 .animate-cctv {
   animation: rotate-cctv 2s infinite alternate ease-in-out;
 }
+
+@keyframes meteor {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100%) scaleY(0.5);
+  }
+}
+.animate-meteor {
+  animation: meteor 5s linear infinite;
+}

@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import mainproducts from "../components/Mainproducts";
 import { Viewer } from "@react-pdf-viewer/core";
+import background from "../images/triani-image-1.jpg";
+import first from "../images/2.png";
+import second from "../images/3.png";
+import third from "../images/4.png";
+import fourth from "../images/5.png";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import { ScrollTop } from "primereact/scrolltop";
 
 const Categories = () => {
   const [searchParams] = useSearchParams();
@@ -48,16 +56,62 @@ const Categories = () => {
 
         {/* Optional heading or text content */}
         <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-white text-4xl font-bold">{id}'s</h1>
+          <h1 className="text-white text-4xl font-bold">
+            {id}
+            {id.endsWith("ras") ||
+            id.startsWith("Smart") ||
+            id.startsWith("Server")
+              ? ""
+              : "'s"}
+          </h1>
         </div>
       </div>
       {id.startsWith("Smart") ? (
-        <div className=" flex justify-center items-center">
-          <Viewer fileUrl="/DGS-F1006P-E.pdf" />;
+        <div className="  bg-slate-50 text-gray-500 p-10   ">
+          {/* <div className=" flex justify-center font-bold mb-10 text-orange-600 items-center text-7xl">
+            SMART GPU WITH<span className=" text-black ms-4"> AI CAMERA</span>
+          </div>
+          <div className="px-10">
+            <div className=" text-sky-500 font-bold text-5xl mt-5 ">
+              Understanding CCTV with DVR
+            </div>
+            <div className=" text-xl text-black font-semibold mt-4">
+              CCTV (Closed-Circuit Television) cameras with DVR (Digital Video
+              Recorder) are a popular surveillance solution for homes. Here’s
+              how they work
+            </div>
+          </div>
+          <div className=" p-20">
+            <div className="  grid grid-cols-2 gap-20 ">
+              <div>
+                <img className="" src={first}></img>
+              </div>
+              <div>
+                <img src={second}></img>
+              </div>
+              <div>
+                <img src={third}></img>
+              </div>
+              <div>
+                <img src={fourth}></img>
+              </div>
+            </div>
+            <div>
+              <div className=" text-xl text-sky-600 font-semibold">
+                Benefits for Home Use
+              </div>
+              <div className=" text-xl text-sky-600 font-semibold">
+                Benefits for Home Use
+              </div>
+            </div>
+          </div> */}
+          <div className="w-full -mt-40 bg-red-50  items-center flex justify-center">
+            <Viewer fileUrl="/smartgpu.pdf" className="w-full h-screen" />
+          </div>
         </div>
       ) : (
         <div>
-          <div className=" bg-slate-50 text-gray-500 grid lg:grid-cols-4 gap-7 p-5">
+          <div className=" bg-white  text-gray-500 grid lg:grid-cols-4 gap-7 p-5">
             {products.map((product, index) => (
               <div
                 key={index}
@@ -90,6 +144,14 @@ const Categories = () => {
           </div>
         </div>
       )}
+      <div className="bg-red-500">
+        <ScrollTop
+          target="window"
+          threshold={100}
+          className="w-3rem h-3rem border-round bg-orange-600"
+          icon="pi pi-arrow-up text-white text-xl" // Apply orange color here
+        />
+      </div>
     </div>
   );
 };
