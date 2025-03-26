@@ -17,6 +17,7 @@ import image2 from "../images/india/image (11).jpg";
 import image3 from "../images/india/image (12).jpg";
 
 import { motion } from "framer-motion";
+import { ScrollTop } from "primereact/scrolltop";
 
 const About = () => {
   // const { styles } = useStyle();
@@ -621,6 +622,14 @@ const About = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="bg-red-500">
+        <ScrollTop
+          target="window"
+          threshold={100}
+          className="w-3rem h-3rem border-round bg-orange-600"
+          icon="pi pi-arrow-up text-white text-xl" // Apply orange color here
+        />
       </div>
     </div>
   );

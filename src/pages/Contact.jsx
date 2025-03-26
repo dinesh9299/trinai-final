@@ -12,6 +12,8 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 import { FaLocationDot } from "react-icons/fa6";
 import MAp from "../components/Map";
+import trinai5 from "../images/trinai-5.jpg";
+
 import { ScrollTop } from "primereact/scrolltop";
 const Contact = () => {
   const [value, setValue] = useState("");
@@ -27,8 +29,7 @@ const Contact = () => {
         <div
           className="absolute inset-0 bg-fixed bg-center  bg-cover"
           style={{
-            backgroundImage:
-              "url(https://www.shutterstock.com/image-photo/modern-cctv-camera-on-wall-600nw-784897093.jpg)",
+            backgroundImage: `url(${trinai5})`,
           }}
         ></div>
 
@@ -105,13 +106,14 @@ const Contact = () => {
           <div className=" bg-slate-200 px-10 py-5 rounded-lg flex flex-col gap-5">
             <div>
               <div className=" text-2xl font-bold">Address</div>
-              <div className=" flex justify-start items-center gap-3 mt-2">
+              <div className=" flex justify-start items-center  gap-3 mt-2">
                 <div>
                   {" "}
                   <FaLocationDot className=" text-orange-600" size={24} />
                 </div>
-                <div className=" text-black text-xl font-thin">
-                  Shipper, 208 Avenue street,New York, USA
+                <div className=" text-black text-md font-thin">
+                  #501,#508-510, Shangrila Plaza , Road No. 2, Park View
+                  Enclave, Banjara Hills , Hyderabad, Telangana-500034{" "}
                 </div>
               </div>
             </div>
@@ -122,20 +124,20 @@ const Contact = () => {
                   <IoMdMail className=" text-orange-600" size={25} />
                 </div>
                 <div className=" text-black text-xl font-thin">
-                  info@trinai.com
+                  trinai@brihaspathi.com
                 </div>
               </div>
             </div>
             <div>
               <div className=" text-2xl font-bold">Call us</div>
-              <div className=" flex justify-start items-center gap-3 mt-2">
+              {/* <div className=" flex justify-start items-center gap-3 mt-2">
                 <div>
                   <TiSupport className=" text-orange-600" size={30} />
                 </div>
                 <div className=" text-black text-xl font-thin">
                   support@gmail.com
                 </div>
-              </div>
+              </div> */}
 
               <div className=" flex justify-start items-center gap-3 mt-2">
                 <div>
@@ -152,28 +154,36 @@ const Contact = () => {
               </div>
               <div className=" flex  items-center gap-10 mt-2">
                 <div>
-                  <FaFacebookF
-                    className=" text-orange-600 hover:text-gray-500  cursor-pointer"
-                    size={20}
-                  />
+                  <a href="https://www.facebook.com/profile.php?id=61574150717517">
+                    <FaFacebookF
+                      className=" text-orange-600 hover:text-gray-500  cursor-pointer"
+                      size={20}
+                    />
+                  </a>
                 </div>
                 <div>
-                  <FaTwitter
-                    className=" text-orange-600 hover:text-gray-500  cursor-pointer"
-                    size={20}
-                  />
+                  <a href="https://x.com/TRINAI557289">
+                    <FaTwitter
+                      className=" text-orange-600 hover:text-gray-500  cursor-pointer"
+                      size={20}
+                    />
+                  </a>
                 </div>
                 <div>
-                  <AiFillInstagram
-                    className=" text-orange-600 hover:text-gray-500  cursor-pointer"
-                    size={20}
-                  />
+                  <a href="https://www.instagram.com/trinai_official/">
+                    <AiFillInstagram
+                      className=" text-orange-600 hover:text-gray-500  cursor-pointer"
+                      size={20}
+                    />
+                  </a>
                 </div>
                 <div>
-                  <FaLinkedinIn
-                    className=" text-orange-600 hover:text-gray-500  cursor-pointer"
-                    size={20}
-                  />
+                  <a href="https://www.linkedin.com/company/trinai/">
+                    <FaLinkedinIn
+                      className=" text-orange-600 hover:text-gray-500  cursor-pointer"
+                      size={20}
+                    />
+                  </a>
                 </div>
               </div>
             </div>

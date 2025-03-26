@@ -17,6 +17,12 @@ import { Button, ConfigProvider, Space } from "antd";
 import { createStyles } from "antd-style";
 import MyCarousel from "./Other";
 import { Link } from "react-router-dom";
+
+import trinai1 from "../images/trinai-1.jpg";
+import trinai2 from "../images/trinai-2.jpg";
+import trinai3 from "../images/trinai-3.png";
+import trinai4 from "../images/trinai-4.png";
+
 const useStyle = createStyles(({ prefixCls, css }) => ({
   linearGradientButton: css`
     &.${prefixCls}-btn-primary:not([disabled]):not(
@@ -244,10 +250,7 @@ const Home = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               >
-                <img
-                  className=" rounded-md"
-                  src="http://trinai.in/Images/NewspageImages/city.jpg"
-                ></img>
+                <img className="rounded-md" src={trinai1}></img>
               </motion.div>
             </div>
             <motion.div
@@ -350,10 +353,7 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <img
-                className=" rounded-md"
-                src="http://trinai.in/Images/SolutionImages/airport.jpg"
-              ></img>
+              <img className=" rounded-md" src={trinai2}></img>
             </motion.div>
           </div>
         </div>
@@ -366,7 +366,7 @@ const Home = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <img src="http://trinai.in/Images/DOME%20(2).png"></img>
+            <img src={trinai3}></img>
           </motion.div>
           <motion.div
             initial={{ x: 200, opacity: 0 }}
@@ -460,7 +460,7 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <img src="http://trinai.in/Images/Bullet_1%20(4).png"></img>
+              <img src={trinai4}></img>
             </motion.div>
           </div>
         </div>

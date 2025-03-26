@@ -6,6 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaPinterestSquare } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 import { IoMdMail } from "react-icons/io";
 const Footer = () => {
@@ -70,15 +71,21 @@ const Footer = () => {
                   <FaTwitter className=" " size={20} />
                 </a>
               </div>
-              <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
-                <a href="https://in.pinterest.com/trinai_official/">
-                  <FaPinterestSquare className=" " size={20} />
-                </a>
-              </div>
+
               <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
                 <a href="https://www.instagram.com/trinai_official/">
                   {" "}
                   <FaInstagram className=" " size={20} />
+                </a>
+              </div>
+              <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
+                <a href="https://www.linkedin.com/company/106424439">
+                  <FaLinkedinIn className=" " size={20} />
+                </a>
+              </div>
+              <div className=" bg-white text-black  hover:text-white p-3 rounded-full hover:bg-slate-500 hover:cursor-pointer">
+                <a href="https://in.pinterest.com/trinai_official/">
+                  <FaPinterestSquare className=" " size={20} />
                 </a>
               </div>
             </div>

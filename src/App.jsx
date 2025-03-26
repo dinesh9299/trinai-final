@@ -11,6 +11,7 @@ import Viewproducts from "./pages/Viewproducts";
 import Products from "./pages/Products";
 import Details from "./components/Extra";
 import MyCarousel from "./pages/Other";
+import FluidTabs from "./Practice/Lucidtab";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="products" element={<Products />}></Route>
           <Route path="extra" element={<Details />}></Route>
           <Route path="carousel" element={<MyCarousel />} />
+          <Route path="fluid" element={<FluidTabs />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

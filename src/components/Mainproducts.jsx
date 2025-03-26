@@ -2154,7 +2154,7 @@ export const productsall = [
   {
     model: "AI02B050L67-04MV",
     brand: "TRINAI",
-    id: "10",
+    id: 10,
     mp: "2",
     cameraType: "Bullet",
     name: "2MP HD Bullet Camera",
@@ -3829,8 +3829,8 @@ export const productsall = [
     mp: "2",
     cameraType: "Bullet",
     name: "2MP HD Bullet Camera",
-    Document:
-      "DataSheets/Data Sheets/AI02D040L67-05MV/AI05ID040L67-013F-LS.pdf",
+    document:
+      "DataSheets/Data Sheets/AI02D040L67-05MV/AI02ID040L67-05MV-013F-LS.pdf",
     productType: "2MP WDR Lighthunter IR Network Bullet Camera",
     keyFeatures: [
       'High quality image with 2MP, 1/2.8" CMOS sensor',

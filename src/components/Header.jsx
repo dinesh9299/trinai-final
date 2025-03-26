@@ -223,7 +223,7 @@ const Header = () => {
       {/* Mega menu section */}
       {isCategoriesOpen && (
         <div
-          className="absolute left-0 top-full w-full bg-white shadow-2xl border-t pt-6 pb-8 px-8 z-50"
+          className="absolute  left-0 top-full w-full bg-white shadow-2xl border-t pt-6 pb-8 px-8 z-50"
           onMouseEnter={() => setIsCategoriesOpen(true)}
           onMouseLeave={() => setIsCategoriesOpen(false)}
         >
@@ -248,12 +248,12 @@ const Header = () => {
             {/* Right dynamic product list */}
             <div className="w-3/4">
               {" "}
-              <div className=" grid grid-cols-3  gap-10 text-gray-700">
+              <div className="  min-h-24 grid grid-cols-3  gap-10 text-gray-700">
                 {productsByCategory[selectedCategory]?.map((product, index) => (
                   // <Link to="#" key={index} className="hover:text-blue-600">
                   //   {product.name}
                   // </Link>
-                  <div key={index}>
+                  <div key={index} className=" ">
                     <div
                       className=" cursor-pointer hover:text-blue-500"
                       onClick={() => {

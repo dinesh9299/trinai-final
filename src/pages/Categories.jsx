@@ -10,6 +10,7 @@ import fourth from "../images/5.png";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { ScrollTop } from "primereact/scrolltop";
+import trinai5 from "../images/trinai-5.jpg";
 
 const Categories = () => {
   const [searchParams] = useSearchParams();
@@ -46,8 +47,7 @@ const Categories = () => {
         <div
           className="absolute inset-0 bg-fixed bg-center  bg-cover"
           style={{
-            backgroundImage:
-              "url(https://www.shutterstock.com/image-photo/modern-cctv-camera-on-wall-600nw-784897093.jpg)",
+            backgroundImage: `url(${trinai5})`,
           }}
         ></div>
 

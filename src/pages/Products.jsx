@@ -27,7 +27,7 @@ const Products = () => {
         </div>
       </Extra>
       <div className="relative  z-2 -mt-44 lg:p-20 md:p-10 p-5">
-        <div className=" border grid lg:grid-cols-4 grid-cols-2 md:grid-cols-4 gap-10 p-5 bg-white lg:p-20 rounded-lg">
+        <div className="  grid lg:grid-cols-4 grid-cols-2 md:grid-cols-4 gap-10 p-5 bg-white lg:p-20 rounded-lg">
           <div
             className=" shadow-md hover:scale-105 p-5  cursor-pointer"
             onClick={() => {
@@ -130,7 +130,7 @@ const Products = () => {
             <div className=" flex justify-center items-center">
               <img className=" text-center" src={adnvr}></img>
             </div>
-            <div className=" text-gray-500 flex justify-center items-center">
+            <div className=" text-gray-500 flex text-center  mt-2 justify-center items-center">
               Hybrid Video Recorder
             </div>
           </div>
