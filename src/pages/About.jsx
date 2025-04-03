@@ -15,6 +15,7 @@ import workflow3 from "../images/india/image (4).jpg";
 import image1 from "../images/india/image (10).jpg";
 import image2 from "../images/india/image (11).jpg";
 import image3 from "../images/india/image (12).jpg";
+import banner from "../images/cctv1.jpg";
 
 import { motion } from "framer-motion";
 import { ScrollTop } from "primereact/scrolltop";
@@ -130,7 +131,7 @@ const About = () => {
       {/* Banner Section */}
       <div className="w-full">
         <img
-          src="http://trinai.in/Images/Capture.JPG"
+          src={banner}
           alt="Banner"
           className="w-full h-[250px] md:h-[500px] lg:h-[400px] object-cover"
         />

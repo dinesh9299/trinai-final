@@ -145,10 +145,10 @@ const Home = () => {
               initial={{ x: -200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute  inset-0 flex flex-col justify-center items-start text-center text-white bg-opacity-30 p-20"
+              className="absolute  inset-0 flex flex-col justify-center items-center md:items-start lg:items-start text-center text-white bg-opacity-30 md:p-20   lg:p-20"
             >
               <h2 className="text-3xl md:text-5xl font-bold">
-                Welcome to Trinai
+                Welcome to TRINAI
               </h2>
               <p className="text-lg md:text-2xl mt-4">
                 The Future of Smart Surveillance in INDIA
@@ -162,7 +162,7 @@ const Home = () => {
               alt="Slide 2"
               className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover"
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-30 p-4">
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-30 ">
               <motion.div
                 initial={{ x: -200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -193,7 +193,7 @@ const Home = () => {
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute inset-0 flex flex-col justify-center pe-20 items-end text-center text-white  p-4"
+              className="absolute inset-0 flex flex-col lg:justify-center md:justify-center justify-center lg:pe-20 lg:items-end text-center text-white  p-4"
             >
               <h2 className="text-3xl md:text-5xl font-bold">
                 Smart Surveillance
@@ -215,7 +215,7 @@ const Home = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <div className="text-orange-600 text-xl font-bold mb-2 ms-1">
-              Abouot Us
+              About Us
             </div>
             <div className=" text-4xl  font-serif text-gray-500">
               Innovative security, powered by precision.

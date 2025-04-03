@@ -16,6 +16,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 import { Button } from "antd";
 import { IoMdDownload } from "react-icons/io";
+import { ScrollTop } from "primereact/scrolltop";
 
 // Set the PDF worker source
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -127,6 +128,15 @@ function Cameraproductsdetails() {
             </a>
           </div>
         )}
+      </div>
+
+      <div className="bg-red-500">
+        <ScrollTop
+          target="window"
+          threshold={100}
+          className="w-3rem h-3rem border-round bg-orange-600"
+          icon="pi pi-arrow-up text-white text-xl" // Apply orange color here
+        />
       </div>
     </div>
   );

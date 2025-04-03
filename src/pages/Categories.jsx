@@ -39,7 +39,6 @@ const Categories = () => {
     }
   }, [id, mainproducts]); // Add dependencies to avoid unnecessary re-renders
 
-  console.log("producst", products);
   return (
     <div>
       <div className="relative h-[50vh] w-full overflow-hidden">
@@ -68,43 +67,6 @@ const Categories = () => {
       </div>
       {id.startsWith("Smart") ? (
         <div className="  bg-slate-50 text-gray-500 p-10   ">
-          {/* <div className=" flex justify-center font-bold mb-10 text-orange-600 items-center text-7xl">
-            SMART GPU WITH<span className=" text-black ms-4"> AI CAMERA</span>
-          </div>
-          <div className="px-10">
-            <div className=" text-sky-500 font-bold text-5xl mt-5 ">
-              Understanding CCTV with DVR
-            </div>
-            <div className=" text-xl text-black font-semibold mt-4">
-              CCTV (Closed-Circuit Television) cameras with DVR (Digital Video
-              Recorder) are a popular surveillance solution for homes. Here’s
-              how they work
-            </div>
-          </div>
-          <div className=" p-20">
-            <div className="  grid grid-cols-2 gap-20 ">
-              <div>
-                <img className="" src={first}></img>
-              </div>
-              <div>
-                <img src={second}></img>
-              </div>
-              <div>
-                <img src={third}></img>
-              </div>
-              <div>
-                <img src={fourth}></img>
-              </div>
-            </div>
-            <div>
-              <div className=" text-xl text-sky-600 font-semibold">
-                Benefits for Home Use
-              </div>
-              <div className=" text-xl text-sky-600 font-semibold">
-                Benefits for Home Use
-              </div>
-            </div>
-          </div> */}
           <div className="w-full -mt-40 bg-red-50  items-center flex justify-center">
             <Viewer fileUrl="/smartgpu.pdf" className="w-full h-screen" />
           </div>
@@ -134,6 +96,7 @@ const Categories = () => {
                 <div className="bg-white text-orange-600 p-2">
                   {!id.endsWith("NVR") &&
                     !id.endsWith("Recorder") &&
+                    !id.startsWith("Thermal") &&
                     !id.startsWith("Server") && <span>{product.mp}MP</span>}
                   <span className="text-gray-500 ms-3 text-center">
                     {product.model}

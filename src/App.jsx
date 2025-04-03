@@ -15,7 +15,9 @@ import FluidTabs from "./Practice/Lucidtab";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+    //  basename="/trinai_temp"
+    >
       <Routes>
         <Route path="/" element={<Main />}>
           <Route path="" index element={<Home />}></Route>

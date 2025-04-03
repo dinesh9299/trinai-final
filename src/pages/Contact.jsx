@@ -3,7 +3,12 @@ import TextField from "@mui/material/TextField";
 import { IoMdMail } from "react-icons/io";
 import { TiSupport } from "react-icons/ti";
 import { MdCall, MdPrecisionManufacturing } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaPinterest,
+} from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { ScrollTop } from "primereact/scrolltop";
@@ -137,14 +142,11 @@ const Contact = () => {
 
     if (valid) {
       try {
-        const response = await fetch(
-          "https://trinai-backend.onrender.com/send-email",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-          }
-        );
+        const response = await fetch("http://192.168.1.155:5000/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
         if (response.ok) {
           alert("Email sent successfully!");
           setLoader(false);
@@ -373,26 +375,35 @@ const Contact = () => {
             <ContactDetail
               icon={<MdCall />}
               title="Call us"
-              text="+919885888835"
+              text="+91 9885888835"
             />
             <div>
               <h3 className="text-2xl font-bold">Follow us on social media</h3>
               <div className="flex gap-10 mt-2">
                 <SocialIcon
                   href="https://www.facebook.com/profile.php?id=61574150717517"
+                  target="_Blank"
                   Icon={FaFacebookF}
                 />
                 <SocialIcon
                   href="https://x.com/TRINAI557289"
+                  target="_Blank"
                   Icon={FaTwitter}
                 />
                 <SocialIcon
                   href="https://www.instagram.com/trinai_official/"
+                  target="_Blank"
                   Icon={AiFillInstagram}
                 />
                 <SocialIcon
                   href="https://www.linkedin.com/company/trinai/"
+                  target="_Blank"
                   Icon={FaLinkedinIn}
+                />
+                <SocialIcon
+                  href="https://in.pinterest.com/trinai_official/"
+                  target="_Blank"
+                  Icon={FaPinterest}
                 />
               </div>
             </div>
@@ -408,7 +419,7 @@ const Contact = () => {
           width="100%"
           height="400"
           style={{ border: 0 }}
-          allowfullscreen=""
+          // allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>

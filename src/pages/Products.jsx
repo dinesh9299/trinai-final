@@ -126,7 +126,16 @@ const Products = () => {
               Server
             </div>
           </div>
-          <div className=" shadow-md hover:scale-105 p-5 cursor-pointer ">
+          <div
+            onClick={() => {
+              navigate(
+                `/categories?query=${encodeURIComponent(
+                  "Smart GPU with AI Camera"
+                )}`
+              );
+            }}
+            className=" shadow-md hover:scale-105 p-5 cursor-pointer "
+          >
             <div className=" flex justify-center items-center">
               <img className=" text-center" src={adnvr}></img>
             </div>

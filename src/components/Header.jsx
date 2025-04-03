@@ -8,6 +8,8 @@ import dome from "../images/AI02D040L67-05MV.png";
 import eyeball from "../images/AI08ID030L67-28(40)F-LS.png";
 import ptz from "../images/AI02P150L66-33MV-148F-LS.png";
 import server from "../images/Trinai Server.png";
+import nvr from "../images/nvr.png";
+import thermal from "../images/thermal-camera.png";
 
 const categories = [
   //   "HD CCTV Camera",
@@ -16,8 +18,10 @@ const categories = [
   "Eyeball Cameras",
   "Dome Cameras",
   "PTZ Cameras",
+  "Thermal Cameras",
   "Network Video Recorder",
   // "Network Switches",
+
   "Server",
   "Smart GPU with AI Camera",
   //   "WiFi Smart",
@@ -30,6 +34,14 @@ const categories = [
 //   //   ],
 
 const productsByCategory = {
+  "Thermal Cameras": [
+    {
+      name: "Thermal Cameras",
+      image:
+        "https://cdn.vectorstock.com/i/1000v/32/13/cctv-camera-security-surveillance-system-vector-20943213.jpg",
+    },
+  ],
+
   "Bullet Cameras": [
     {
       name: "2MP HD Bullet Camera",
@@ -168,7 +180,8 @@ const categoryImages = {
   "Dome Cameras": dome,
   "PTZ Cameras": ptz,
   Server: server,
-  "Network Video Recorder": "http://trinai.in/Images/NVR.png",
+  "Thermal Cameras": thermal,
+  "Network Video Recorder": nvr,
   "Network Switches":
     "http://trinai.in/Images/Poe%20Switches/4%20port%20poe.png",
   "Smart GPU with AI Camera": gpu,
