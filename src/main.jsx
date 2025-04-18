@@ -10,11 +10,14 @@ import "primeicons/primeicons.css"; // For PrimeIcons (icons)
 
 import { Worker } from "@react-pdf-viewer/core";
 import "antd";
+import { UserProvider } from "./context/UserContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-      <App />
-    </Worker>
+    <UserProvider>
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+        <App />
+      </Worker>
+    </UserProvider>
   </StrictMode>
 );

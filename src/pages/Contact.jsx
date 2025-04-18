@@ -13,6 +13,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { ScrollTop } from "primereact/scrolltop";
 import trinai5 from "../images/trinai-5.jpg";
+import { Icon } from "@mui/material";
+import Threads from "./Threads";
 
 const Contact = () => {
   // 🟢 State for form fields
@@ -142,7 +144,7 @@ const Contact = () => {
 
     if (valid) {
       try {
-        const response = await fetch("http://192.168.1.155:5000/send-email", {
+        const response = await fetch("https://183.82.0.94:5000/send-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
@@ -450,7 +452,7 @@ const ContactDetail = ({ icon, title, text }) => (
 );
 
 // Reusable Component for Social Icons
-const SocialIcon = ({ href, Icon }) => (
+const SocialIcon = ({ href }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Icon
       className="text-orange-600 hover:text-gray-500 cursor-pointer"
